@@ -1,0 +1,26 @@
+/* Variaveis de cor */
+:root {
+    --bg-primario: rgb(44, 73, 125);
+    --bg-segundo: rgb(209, 209, 209);
+    --bg-botao: rgb(131, 96, 63)
+}
+
+/* Toda a Página */
+*{
+    padding: 5;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--bg-segundo);
+    box-sizing: border-box;
+    
+}
+/* corpo da página */
+body{
+    background-color: var(--bg-primario);
+    background-image: url("/img/fundo.jpg");
+    background-position: center;
+}
+
+button{
+    background-color: var(--bg-botao);
+}
