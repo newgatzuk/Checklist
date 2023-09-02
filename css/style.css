@@ -2,7 +2,18 @@
 :root {
     --bg-primario: rgb(44, 73, 125);
     --bg-segundo: rgb(209, 209, 209);
-    --bg-botao: rgb(131, 96, 63)
+    --bg-botao: rgb(181, 128, 79)
+}
+/* Animações */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Toda a Página */
@@ -21,6 +32,56 @@ body{
     background-position: center;
 }
 
+
+/* Personalização botão */
 button{
     background-color: var(--bg-botao);
+    animation: aparecer 1s;
+    padding: .3rem .6rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    background-color: #4776a9;
+}
+button:hover > i{
+    color: #000000;
+}
+button i{
+    color: #fff;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* Personalização input "select" */
+input,select{
+    /* isso vai mudar o espaçamento dentro do input */
+    padding: 0.25rem 0.5rem;
+}
+
+
+/* Esconder o editar */
+.esconder{
+    display: none;
+}
+
+/* deixar o corpo no meio */
+#formulario-inteiro{
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+/* titulo onde tem nome Check List */
+.titulo{
+    text-align: center;
+    color: black;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #141414;
 }
